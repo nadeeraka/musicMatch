@@ -4,7 +4,7 @@ const Context = React.createContext();
 
 export class Provider extends Component {
   state = {
-    tracks: "",
+    tracks: [],
     heading: "Top 10 songs "
   };
   render() {
