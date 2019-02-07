@@ -9,9 +9,9 @@ export class Provider extends Component {
   };
   render() {
     return (
-      <Contaxet.Provider value={this.state}>
+      <Context.Provider value={this.state}>
         {this.props.children}
-      </Contaxet.Provider>
+      </Context.Provider>
     );
   }
 }
