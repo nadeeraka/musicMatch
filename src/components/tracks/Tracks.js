@@ -21,11 +21,17 @@ export default class Tracks extends Component {
       <>
         <Consumer>
           {value => {
+            const { Tracks, heading } = value;
+            if (Tracks === undefined || Tracks.length === 0) {
+              return <Spinner />;
+            } else {
+              return <h1>Tracks Loaded</h1>;
+            }
             return (
-              <div>
-                <h1>hahaa</h1>
-                <Spinner />
-              </div>
+              <>
+                <h3 className="text-center mb-4">{heading}</h3>
+                <div className="row" />
+              </>
             );
           }}
         </Consumer>
